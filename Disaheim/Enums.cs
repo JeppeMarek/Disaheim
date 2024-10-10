@@ -12,8 +12,4 @@ namespace Disaheim
         medium,
         high
     };
-    public class Level_enumeration
-    {
-        
-    }
 }
