@@ -34,9 +34,17 @@ namespace Disaheim
         }
         public double GetValueOfCourse(Course course)
         {
-            double courseDuration = course.DurationInMinutes;
-            double courseValue = 875*(courseDuration%60);
-            return courseValue;
+            double duration = course.DurationInMinutes;
+            int perHour = 875;
+            double price = 0;
+            int fullHours = (int)(duration / 60);
+            double remainingMinutes = duration % 60;
+            price = fullHours * perHour;
+            if (remainingMinutes > 0)
+            {
+                price += perHour * (remainingMinutes / 60.0);
+            }
+            return price;
         }
     }
 }

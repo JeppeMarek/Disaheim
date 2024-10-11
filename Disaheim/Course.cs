@@ -20,6 +20,11 @@ namespace Disaheim
             Name = name;
             DurationInMinutes = durationInMinutes;
         }
+        public Course (int durationInMinutes, string name)
+        {
+            Name=name;
+            DurationInMinutes = durationInMinutes;
+        }
 
         public override string ToString()
         {
