@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace Disaheim
 {
-    public class Amulet
+    public class Amulet : Merchandise
     {
-        public string ItemId;
         public string Design;
         public Level Quality;
         public Amulet (string itemId) : this(itemId,Level.medium,"")
@@ -20,7 +19,7 @@ namespace Disaheim
         {
          
         }
-        public Amulet (string itemId, Level quality, string design)
+        public Amulet (string itemId, Level quality, string design) //: base(itemId)
         {
             ItemId = itemId;
             Quality = quality;

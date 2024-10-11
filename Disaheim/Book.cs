@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Disaheim
 {
-    public class Book
+    public class Book : Merchandise
     {
-        public string ItemId;
         public string Title;
         public double Price;
 
@@ -20,7 +19,7 @@ namespace Disaheim
         {
             
         }
-        public Book(string itemId, string title, double price)
+        public Book(string itemId, string title, double price) //: base(itemId) 
         {
             ItemId = itemId;
             Title = title;

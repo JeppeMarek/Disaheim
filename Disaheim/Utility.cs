@@ -32,5 +32,11 @@ namespace Disaheim
             Console.WriteLine(amuletValue);
             return amuletValue;
         }
+        public double GetValueOfCourse(Course course)
+        {
+            double courseDuration = course.DurationInMinutes;
+            double courseValue = 875*(courseDuration%60);
+            return courseValue;
+        }
     }
 }
